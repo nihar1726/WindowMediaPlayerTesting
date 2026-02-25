@@ -47,6 +47,20 @@
         "testCaseId": "4890c250-0ae1-451b-af5e-05895b24128f",
         "testCaseType": "TestCase",
         "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e0c15dbd-b146-421f-bd24-587c9eb28c4a",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_AddMusicFromFolder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e55ce540-82d6-4456-83a6-50727fee5b22",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_RemoveMusicFromMediaPlayer.xaml"
       }
     ],
     "saveToCloud": false
