@@ -44,9 +44,17 @@
     "fileInfoCollection": [
       {
         "editingStatus": "InProgress",
-        "testCaseId": "4890c250-0ae1-451b-af5e-05895b24128f",
+        "testCaseId": "14346ae4-9fa2-49b8-bafd-443e0a047d91",
         "testCaseType": "TestCase",
-        "fileName": "TestCase.xaml"
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC01 MusicLibrary.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b0bd6b23-b861-4823-8405-369d251ef263",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCase1.xaml"
       }
     ],
     "saveToCloud": false
