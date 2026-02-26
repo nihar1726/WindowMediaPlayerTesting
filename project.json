@@ -5,6 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "atuipath_utilities": "[1.0.8]",
+    "Create.Report.Library": "[1.0.3]",
     "UiPath.System.Activities": "[25.12.2]",
     "UiPath.Testing.Activities": "[25.10.0]",
     "UiPath.UIAutomation.Activities": "[26.1.0-preview]"
@@ -44,17 +45,16 @@
     "fileInfoCollection": [
       {
         "editingStatus": "InProgress",
-        "testCaseId": "14346ae4-9fa2-49b8-bafd-443e0a047d91",
+        "testCaseId": "4890c250-0ae1-451b-af5e-05895b24128f",
         "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TC01 MusicLibrary.xaml"
+        "fileName": "TestCase.xaml"
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "b0bd6b23-b861-4823-8405-369d251ef263",
+        "testCaseId": "8d782677-9fc5-49c6-8ba8-08286ce6e605",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCase1.xaml"
+        "fileName": "Harsh_Tc.xaml"
       }
     ],
     "saveToCloud": false
