@@ -46,35 +46,7 @@
         "editingStatus": "InProgress",
         "testCaseId": "4890c250-0ae1-451b-af5e-05895b24128f",
         "testCaseType": "TestCase",
-        "fileName": "TestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "e0c15dbd-b146-421f-bd24-587c9eb28c4a",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TC_AddMusicFromFolder.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "e55ce540-82d6-4456-83a6-50727fee5b22",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TC_RemoveMusicFromMediaPlayer.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "a87f28be-fb5e-40fc-bec5-d63c6d374d11",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TC_AddSingleSongFromFolder.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "3c17dba3-0359-4a5c-b45d-2f4f57dbe6dc",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TC_CreatingAPlaylistAndAddingSong.xaml"
+        "fileName": "VideoPlayer.xaml"
       }
     ],
     "saveToCloud": false
