@@ -1,0 +1,479 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_AddMusicToPlaylist" this:TC_AddMusicToPlaylist.int_reportID="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ar="clr-namespace:atuipath_utilities.Report;assembly=atuipath_utilities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="suiteID" Type="OutArgument(x:String)" />
+    <x:Property Name="testID" Type="OutArgument(x:String)" />
+    <x:Property Name="int_reportID" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>atuipath_utilities.Report</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>atuipath_utilities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="918.6666666666666,5625.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If sap:VirtualizedContainerService.HintSize="524,449.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">int_reportID.Equals(0)==true</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,218.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="416,158.66666666666666" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportName="TC 01 Add music to media playert">
+            <ra:CreateReport.ReportLocation>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\reports"</CSharpValue>
+              </InArgument>
+            </ra:CreateReport.ReportLocation>
+            <ra:CreateReport.isCreated>
+              <OutArgument x:TypeArguments="x:Int32">
+                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">int_reportID</CSharpReference>
+              </OutArgument>
+            </ra:CreateReport.isCreated>
+          </ra:CreateReport>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Adding music from folder">
+      <ra:StartSuite.ReportId>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">int_reportID</CSharpValue>
+        </InArgument>
+      </ra:StartSuite.ReportId>
+      <ra:StartSuite.suiteId>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">suiteID</CSharpReference>
+        </OutArgument>
+      </ra:StartSuite.suiteId>
+    </ra:StartSuite>
+    <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="524,118.66666666666667" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="High" TestName="TC 01 Add music to playlist">
+      <ra:StartTest.ReportId>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">int_reportID</CSharpValue>
+        </InArgument>
+      </ra:StartTest.ReportId>
+      <ra:StartTest.SuiteId>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">suiteID</CSharpValue>
+        </InArgument>
+      </ra:StartTest.SuiteId>
+      <ra:StartTest.testId>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">testID</CSharpReference>
+        </OutArgument>
+      </ra:StartTest.testId>
+    </ra:StartTest>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524,4916" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,4222.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Media Player(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4162.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a2633506-f950-4ca0-95e6-9fdcc83473e2" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,3915.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">"Media Player opens"</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on open file" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2633506-f950-4ca0-95e6-9fdcc83473e2" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="1e41caf4-87fc-418b-8b60-587b3c043212" ContentHash="o_MK20ds70eS7zHWKUa-aA" CvTextArea="1667, 93, 109, 26" CvTextArgument="Open file(s)" CvType="Text" DesignTimeRectangle="1622, 83, 225, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;uia automationid='frame' cls='LandmarkTarget' /&gt;&lt;uia cls='Microsoft.UI.Xaml.Controls.SplitButton' name='Open file(s)' /&gt;" Guid="32e4e134-a146-414e-9132-77321a24c301" InformativeScreenshot="b07e75abbf575deb233796803d0c6287.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/YxT7V17SU0-qOFr8UTDfCQ" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic' title='Media Player' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="1e41caf4-87fc-418b-8b60-587b3c043212" CvElementArea="1621, 80, 226, 48" CvType="InputBox" DesignTimeRectangle="1794, 83, 52, 44" ElementType="Button" FuzzySelectorArgument="&lt;uia automationid='frame' cls='LandmarkTarget' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;&lt;uia automationid='SecondaryButton' cls='Button' name='More options for opening media' role='button' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' matching:name='fuzzy' fuzzylevel:name='0.0' check:fulltext='More options for opening media' /&gt;" Guid="301b10eb-2982-4c0d-b282-655e8b9cd2a2" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">"Open file clicked"</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open file explorer pop up" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,1365.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="c7083806-7723-4a0b-b9a3-794fc034c86f" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1108.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" DisplayName="Click 'Beethoven'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7083806-7723-4a0b-b9a3-794fc034c86f" Version="V5">
+                            <uix:NClick.ClickType>
+                              <InArgument x:TypeArguments="uix:NClickType">
+                                <CSharpValue x:TypeArguments="uix:NClickType" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">UiPath.UIAutomationNext.Enums.NClickType.Double</CSharpValue>
+                              </InArgument>
+                            </uix:NClick.ClickType>
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CVScreenId="c6f16f0e-a1cb-4b3e-a4e8-cbe328f6d230" ContentHash="WpwAXb5Z9USwiM2JzSbr6A" CvTextArea="307, 231, 84, 16" CvTextArgument="Beethoven" CvType="Text" DesignTimeRectangle="305, 223, 216, 33" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='0' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" Guid="5abbf3a9-5e83-4890-b409-7622436e8654" InformativeScreenshot="28f4e7cf4bad4fb1f229c3d058ec90e3.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/U1ks3l_0i0Sf9aPXiPYEKQ" ScopeSelectorArgument="&lt;wnd app='pickerhost.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'clavier-music-beethoven…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7083806-7723-4a0b-b9a3-794fc034c86f" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable ContentHash="XpurRAGVGkyo9jlPbKmUgQ" DesignTimeRectangle="272, 218, 1149, 41" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='0' /&gt;" Guid="5b8ee40d-2ea1-4feb-b0ac-6c94d1de13b6" InformativeScreenshot="376d2b40440d6a293eeb402d75d2a4bb.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/fnJXh1BzakKHByXH1FodXQ" ScopeSelectorArgument="&lt;wnd app='pickerhost.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,314" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" InteractionMode="HardwareEvents" ScopeIdentifier="c7083806-7723-4a0b-b9a3-794fc034c86f" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)]" Version="V5" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Open'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,238.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7083806-7723-4a0b-b9a3-794fc034c86f" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CVScreenId="056fcd5e-efc8-48a0-be1d-e52cbd93c9f2" ContentHash="ArTHArYvzEiSrSFteL70RQ" CvElementArea="640, 643, 134, 40" CvTextArea="682, 655, 46, 19" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="641, 644, 132, 39" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" Guid="c3fa4f1a-585f-4fd4-b3f5-d3dd21f58260" InformativeScreenshot="f2cbc95faaa170747bf91e39b2726548.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/EzSyfD_QTUOHhq-8w9FwQg" ScopeSelectorArgument="&lt;wnd app='pickerhost.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.CloseMode>
+                      <InArgument x:TypeArguments="uix:NAppCloseMode">
+                        <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.CloseMode>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.OpenMode>
+                      <InArgument x:TypeArguments="uix:NAppOpenMode">
+                        <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.OpenMode>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="0, 0, 960, 720" ContentHash="MQjtRaIktU22oHTbEfW5dA" FilePath="C:\\Windows\\System32\\pickerhost.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAM3SURBVGhD7ZnbThNRFIZ7JS2FQlveD29FAaGFARE5CYiCx4QH4BGMl4AcCnJGDoqc5FoSwz03y6y1D+zZi0lWMokVMzv50qZt1nz/nzU3nVQqOclJTnKqevq6S81BUL7qDcpwp+gqXfT0lJpT+IZ9+Y9RqVRufcXiU/6P7xoU4Pr6+k6SBKg2/2+AmZkZmJ6eDoGf+b8bX/0NTR8uoOn9T6L4DjmH4lvkDIpvkFMovNZMnUBh8gTyk8eQf4X8gNGlX2yu9PqRAaSQNIkb6XMrXfSkC450/qXhCPITR2yulNgBwk2f2aZJnsSPPXEljDS++K4Y/8bmSokfAMVJVgtP6fUw0k7LjRNaWEsTY4fQMHbI5kqJDCDdQb4eYWm/aSWtxUcPFM8P2Fzp9SMDSCncKu02rcVRevSQMNINI/tEbniPzZUSO4ArbcVty6rpRqdpI90wrMSJoa9srpTYAWzTVtxrmdiH3MiebRuFicFdqEcGdthcKZEBpDtob8SQtF6NEd2wJ20Z2IX6ZztQ37/N5kqvHxlASqhpZ6eVtBbXwtg0CRPbJF73dAvq+rfYXCnxA5idNm17Td8mTaB436biySabKyV2gNywFvalrbhuun9LtW2lN0g827sB2d51NldKZADpDrrSOSOtW0ZhbNq27Ulne5A1yAZrbK70+pEBpLjrUUdNo7huWa8Hl14n6druLxZ/rpT4AcyNGJLGpjcgixjpQDXtStd2rUJteRUy5RU2V0rsAEwaha00b1pJryhKK5ApVSDTWWFzpUQGkO6gbZmkVcvZQMlmjbAjnbHSy5Z0xxKbKyUygBT3RiRcaS1OwrppK96BLEG6fRHS7VUMwNbDSmuMtBF+fCOdbluEdNsC1LQusLlS4gdg0k7TJL2spI04SS9CTetnxaN5wp8rJTKA9B64Ea7cCIea1rQt6LYd8YfIHNxrmWNzpUQGkGKaZtJmPYy0btqVJh7MEv5cKfEDhKQd4UhpJezjz5USO8DQp/PwaiAkPB9uuWUWapzGXQY/nrK5UmIHqDZJgGpDAYKgdHV5yf/e+9dBZ3w4kwqCzvt34SmNDxaP7v4js+QkJznJ+bvnD7qkBAWo7jrjAAAAAElFTkSuQmCC" InformativeScreenshot="1c327f37e8709063ca1af2634e87b439.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/c7v8S_fnEk2ectKUvz2L8w" Selector="&lt;wnd app='pickerhost.exe' cls='#32770' title='Open' /&gt;" Version="V2">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
+                  </uix:NApplicationCard>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2633506-f950-4ca0-95e6-9fdcc83473e2" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable ContentHash="jAUV7Y5MMkKQtn5kPCJwtg" DesignTimeRectangle="11, 11, 72, 48" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;uia automationid='exitNowPlayingButton' cls='Button' name='Back' /&gt;" Guid="49850b8d-02bd-4901-a5ba-24fabe939b74" InformativeScreenshot="51bf2a8b685283938e99d3b3c8f9bb9b.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/SBMxOOAd6UyCAZKQlItJ3A" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic' title='Media Player' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">"Firt song plays"</CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
+                  <uix:NCheckState DisplayName="Check App State 'Visualisation for clavi…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1569.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a2633506-f950-4ca0-95e6-9fdcc83473e2" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,614.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">"Passed!"</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                        <ar:passedStep sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="passedStep_1" str_in_actualStep="Music successfully added to media player" str_in_expectedStep="Music should be added to media player from a folder" str_in_stepDescription="User added music from a folder into the Media Player app" str_in_stepName="Adding music from folder to Media Player">
+                          <ar:passedStep.str_in_reportId>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">int_reportID</CSharpValue>
+                            </InArgument>
+                          </ar:passedStep.str_in_reportId>
+                          <ar:passedStep.str_in_testId>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">testID</CSharpValue>
+                            </InArgument>
+                          </ar:passedStep.str_in_testId>
+                        </ar:passedStep>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,614.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">"Failed"</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                        <ar:failedStep sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="failedStep_1" str_in_actualStep="User was not able to add music" str_in_expectedStep="Music should be added to media player from a folder" str_in_stepDescription="User added music from a folder into the Media Player app" str_in_stepName="Adding music from folder to Media Player">
+                          <ar:failedStep.str_in_reportId>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">int_reportID</CSharpValue>
+                            </InArgument>
+                          </ar:failedStep.str_in_reportId>
+                          <ar:failedStep.str_in_testId>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">testID</CSharpValue>
+                            </InArgument>
+                          </ar:failedStep.str_in_testId>
+                        </ar:failedStep>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable CVScreenId="bff9541a-b733-4ad8-9662-878e246532b3" ContentHash="0kbnYg1OAkOoWL4GkF2mGA" DesignTimeRectangle="577, 65, 1270, 80" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;uia automationid='frame' cls='LandmarkTarget' /&gt;&lt;uia automationid='HomePageHeader' name='Home' /&gt;" Guid="99a0be4d-e985-4e2f-8fb3-7a2b81a6f322" InformativeScreenshot="cafb09e85a42a2aadfbb301b7f392b41.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/4BuecEF4ekuBWc8ERflaZA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic' title='Media Player' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.CloseMode>
+              <InArgument x:TypeArguments="uix:NAppCloseMode">
+                <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.CloseMode>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.OpenMode>
+              <InArgument x:TypeArguments="uix:NAppOpenMode">
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen</CSharpValue>
+              </InArgument>
+            </uix:NApplicationCard.OpenMode>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1030" ContentHash="_Z1bpHhSqkepu_W0jsRfig" FilePath="Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic" IconBase64="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" InformativeScreenshot="ab591f0122d69ac9825a15ee5776a505.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/T6x-xmn2jk-nSlKcp6zICw" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic' title='Media Player' /&gt;" Version="V2">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,438" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ar:exceptionStep str_in_actualStep="{x:Null}" str_in_expectedStep="{x:Null}" str_in_stepDescription="{x:Null}" str_in_stepName="{x:Null}" sap:VirtualizedContainerService.HintSize="488,378" sap2010:WorkflowViewState.IdRef="exceptionStep_1">
+                <ar:exceptionStep.str_in_reportId>
+                  <InArgument x:TypeArguments="x:Int32">
+                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">int_reportID</CSharpValue>
+                  </InArgument>
+                </ar:exceptionStep.str_in_reportId>
+                <ar:exceptionStep.str_in_testId>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">testID</CSharpValue>
+                  </InArgument>
+                </ar:exceptionStep.str_in_testId>
+              </ar:exceptionStep>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="522,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
