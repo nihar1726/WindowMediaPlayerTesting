@@ -150,7 +150,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="636.6666666666666,5625.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="918.6666666666666,5625.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,7 +193,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="524,118.66666666666667" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Playlist features">
+    <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Adding music from folder">
       <ra:StartSuite.ReportId>
         <InArgument x:TypeArguments="x:Int32">
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">int_reportID</CSharpValue>
@@ -253,7 +253,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable CVScreenId="1e41caf4-87fc-418b-8b60-587b3c043212" ContentHash="o_MK20ds70eS7zHWKUa-aA" CvTextArea="1667, 93, 109, 26" CvTextArgument="Open file(s)" CvType="Text" DesignTimeRectangle="1622, 83, 225, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;uia automationid='frame' cls='LandmarkTarget' /&gt;&lt;uia cls='Microsoft.UI.Xaml.Controls.SplitButton' name='Open file(s)' /&gt;" Guid="32e4e134-a146-414e-9132-77321a24c301" InformativeScreenshot="b07e75abbf575deb233796803d0c6287.jpg" Reference="kxZJ5SbuqkKlcF7lWZ_QLA/YxT7V17SU0-qOFr8UTDfCQ" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic' title='Media Player' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="1e41caf4-87fc-418b-8b60-587b3c043212" CvElementArea="1621, 80, 226, 48" CvType="InputBox" DesignTimeRectangle="1794, 83, 52, 44" ElementType="Button" FuzzySelectorArgument="&lt;uia automationid='frame' cls='LandmarkTarget' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;&lt;uia automationid='SecondaryButton' cls='Button' name='More options for opening media' role='button' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' matching:name='fuzzy' fuzzylevel:name='0.0' check:fulltext='More options for opening media' /&gt;" Guid="301b10eb-2982-4c0d-b282-655e8b9cd2a2" SearchSteps="FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
