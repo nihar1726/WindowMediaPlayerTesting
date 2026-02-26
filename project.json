@@ -68,6 +68,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "TC_AddSingleSongFromFolder.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3c17dba3-0359-4a5c-b45d-2f4f57dbe6dc",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_CreatingAPlaylistAndAddingSong.xaml"
       }
     ],
     "saveToCloud": false
