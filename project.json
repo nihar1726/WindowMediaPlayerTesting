@@ -61,6 +61,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "TC_RemoveMusicFromMediaPlayer.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a87f28be-fb5e-40fc-bec5-d63c6d374d11",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_AddSingleSongFromFolder.xaml"
       }
     ],
     "saveToCloud": false
